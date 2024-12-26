@@ -1,3 +1,4 @@
+"use client";
 import fetchJsonp from "fetch-jsonp";
 import { useState } from "react";
 export default function Weather() {
