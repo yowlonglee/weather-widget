@@ -8,10 +8,10 @@ export default function Weather() {
     today.getMonth() + 1
   }${today.getDate()}`;
   fetchJsonp(url, { jsonpCallbackFunction: "callback_weather" })
-    .then((res) => {
-      return res.json();
+    .then(function (response) {
+      return response.json();
     })
-    .then((response) => {
+    .then(function (response) {
       setWeather(response);
     });
   return <div className="flex justify-center">{weather}</div>;
