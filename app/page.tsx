@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Weather from "./Weather";
 
 export default function Home() {
   return (
@@ -13,7 +14,9 @@ export default function Home() {
           priority
         />
 
-        <div className="flex justify-center">Weather</div>
+        <div className="flex justify-center">
+          <Weather />
+        </div>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
