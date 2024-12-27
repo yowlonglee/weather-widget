@@ -4,7 +4,7 @@ import { useState } from "react";
 export default function Weather() {
   const [weather, setWeather] = useState();
   // const today = new Date();
-  const url = "https://cts.com.tw/api/weather_list.json";
+  const url = "https://www.cts.com.tw/api/weather_list.json";
   const options = {
     method: "GET",
     headers: {
