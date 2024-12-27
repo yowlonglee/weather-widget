@@ -1,11 +1,17 @@
 "use client";
-import fetchJsonp from "fetch-jsonp";
+// import fetchJsonp from "fetch-jsonp";
 import { useState } from "react";
 export default function Weather() {
   const [weather, setWeather] = useState();
   // const today = new Date();
   const url = "https://cts.com.tw/api/weather_list.json";
-  fetchJsonp(url, { jsonpCallbackFunction: "callback_weather" })
+  const options = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+  fetch(url, options)
     .then(function (response) {
       return response.json();
     })
