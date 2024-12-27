@@ -5,7 +5,7 @@ export default function Weather() {
   const [weather, setWeather] = useState();
   // const today = new Date();
   const url = "https://www.cts.com.tw/api/weather_list.json";
-  fetchJsonp(url, { jsonpCallbackFunction: "callback_weather" })
+  fetchJsonp(url, { jsonpCallback: "callback_weather" })
     .then(function (response) {
       return response.json();
     })
